@@ -36,3 +36,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 **/hs_err_pid*
+
+eureka/.mvn/
+eureka/mvnw
+eureka/mvnw.cmd
+ms_eurovision/.mvn/
+ms_eurovision/mvnw
+ms_eurovision/mvnw.cmd
+ms_gateway/.mvn/
+ms_gateway/mvnw
+ms_gateway/mvnw.cmd
