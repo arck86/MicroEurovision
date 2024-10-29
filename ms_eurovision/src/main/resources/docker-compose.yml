@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: my_postgres-ddbb
+    hostname: myhost
+    shm_size: 128mb
+    environment:
+      POSTGRES_DB: eurovision
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sasa
+    volumes:
+      - "/home/arck/BBDD/eurovision:/var/lib/postgresql/data"
+    ports:
+      - "5432:5432"
