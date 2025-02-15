@@ -25,7 +25,7 @@ import com.arck.eurovision.models.entity.Voto;
 import com.arck.eurovision.service.VotoService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-@CrossOrigin(origins = "http://localhost:4321") 
+@CrossOrigin(origins = "*")
 @RestController 
 public class VotoController {
 	
