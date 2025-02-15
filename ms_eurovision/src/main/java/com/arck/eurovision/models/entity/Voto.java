@@ -11,12 +11,12 @@ import jakarta.validation.constraints.Min;
 @Entity
 @Table(name="voto")
 public class Voto {
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
-	
-//	private Pais Pais;
+	private Integer pais;
 	
 	@Min(1)
 	@Max(13)
@@ -30,14 +30,6 @@ public class Voto {
 		Id = id;
 	}
 
-//	public Pais getPais() {
-//		return Pais;
-//	}
-//
-//	public void setPais(Pais pais) {
-//		Pais = pais;
-//	}
-
 	public Integer getVoto() {
 		return voto;
 	}
@@ -45,5 +37,13 @@ public class Voto {
 	public void setVoto(Integer voto) {
 		this.voto = voto;
 	}
-	
+
+	public Integer getPais() {
+		return pais;
+	}
+
+	public void setPais(Integer pais) {
+		this.pais = pais;
+	}
+
 }

@@ -16,6 +16,7 @@ import com.arck.eurovision.models.entity.Axis;
 import com.arck.eurovision.models.entity.ChartOption;
 import com.arck.eurovision.models.entity.Grid;
 import com.arck.eurovision.models.entity.Legend;
+import com.arck.eurovision.models.entity.Resultados;
 import com.arck.eurovision.models.entity.Series;
 import com.arck.eurovision.models.entity.Title;
 import com.arck.eurovision.models.entity.Toolbox;
@@ -33,6 +34,7 @@ public class VotoController {
 
 	@PostMapping(value = "/votos/save")
 	public ResponseEntity<?> save(@RequestBody List<Voto> votos){
+		System.out.println("En el controlador");
 		votoService.save(votos.stream().filter(c -> c.getVoto()>0).toList());
 		return ResponseEntity.ok().build();
 	}
@@ -56,6 +58,12 @@ public class VotoController {
 		
 		return option;
 		
+	}
+	
+	@GetMapping(value = "/tabla")
+	public ResponseEntity<?> save(){
+		List<Resultados> list = votoService.findVotosWithInfo();
+		return ResponseEntity.ok(list);
 	}
 
 }

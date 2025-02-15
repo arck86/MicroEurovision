@@ -11,5 +11,5 @@ public interface PaisRepository extends JpaRepository<Pais, Long>{
 	
 	@Query("from Pais p order by p.nombre asc")
 	public List<Pais> findAllByOrden();
-
+	
 }

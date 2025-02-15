@@ -1,30 +1,32 @@
 package com.arck.eurovision.models.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name="pais")
-public class Pais {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Resultados {
+	
 	private Long id;
 	
 	private String nombre;
 	
 	private String bandera;
 	
-	@Column(name="cancion_youtube")
 	private String cancionYoutube;
 	
 	private String cantante;
 	
 	private String cancion;
+	
+	private Integer votoTotal;
+
+	public Resultados(Long id, String nombre, String bandera, String cancionYoutube, String cantante, String cancion,
+			Integer votoTotal) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.bandera = bandera;
+		this.cancionYoutube = cancionYoutube;
+		this.cantante = cantante;
+		this.cancion = cancion;
+		this.votoTotal = votoTotal;
+	}
 
 	public Long getId() {
 		return id;
@@ -73,5 +75,14 @@ public class Pais {
 	public void setCancion(String cancion) {
 		this.cancion = cancion;
 	}
+
+	public Integer getVotoTotal() {
+		return votoTotal;
+	}
+
+	public void setVotoTotal(Integer votoTotal) {
+		this.votoTotal = votoTotal;
+	}
+
 	
 }
